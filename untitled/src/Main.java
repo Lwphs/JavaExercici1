@@ -1,18 +1,27 @@
+import java.util.Scanner;
+
 import static java.lang.System.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int passengers = 0;
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        out.print(passengers);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            out.println("i = " + i);
-        }
+        Scanner input=new Scanner(System.in);
+        System.out.println("Write a number from 1 to 10 (press Enter)");
+        //Compando per a donar un output del programa a l'usuari
+        int num1;
+        do  {
+            //Comando per a repetir una acció fins a tindre el número desitjat
+            num1= input.nextInt();
+            input.nextLine();
+            if (num1 > 10 || num1 < 1){
+                System.out.println("Please write that number again");
+            }
+
+        } while (num1 > 10 || num1 < 1 );
+        System.out.println("Correct!");
     }
+
+
 }
